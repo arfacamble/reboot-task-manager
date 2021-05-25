@@ -1,0 +1,7 @@
+<h1><%= @task.title %></h1>
+<div class="taks-details"><%= @task.details %></div>
+<% if @task.completed %>
+  <div class="completed-status">☑️ The task is completed</div>
+<% else %>
+  <div class="completed-status">❌ The task is not yet completed</div>
+<% end %>
