@@ -1,6 +1,7 @@
 <h1>Tasks List:</h1>
 <ul class="tasks">
   <% @tasks.each do |task| %>
-    <li><a href="tasks/<%= task.id %>" class="task-link"><%= task.title %></a></li>
+    <li><a href="tasks/<%= task.id %>" class="task-link"><%= task.title %></a><%= link_to "🗑", task_path(task), method: :delete, data: { confirm: "risky move! CONFIRM PLEASE" } %></li>
   <% end %>
 </ul>
+<a href="tasks/new" class="new-task-link">Input new chore</a>
